@@ -190,8 +190,17 @@ public class Restaraunt {
 	 */
 	public boolean equals(Object obj) {
 		
+		/* 1. If the two objects that we are comparing
+		 * have the same address, then we can just 
+		 * return true.
+		 */
+		if(this == obj) {
+			return true;
+		}		
+		
+		
 		/*
-		 *  1. A null check for the parameter
+		 *  2. A null check for the parameter
 		 *  If the parameter is null return false
 		 */
 		
@@ -199,18 +208,15 @@ public class Restaraunt {
 			return false;
 		}
 		
-		/* 2. If the two objects that we are comparing
-		 * have the same address, then we can just 
-		 * return true.
-		 */
-		if(this == obj) {
-			return true;
-		}
+
 		
 		/*
 		 * 3. We need to convert obj which Object to
 		 * Restaraunt.
 		 */
+		if(! (obj instanceof Restaraunt)) {
+			return false;
+		}
 		
 		Restaraunt otherObject = (Restaraunt)obj;
 		// Now we can compare individual values

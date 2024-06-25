@@ -22,6 +22,7 @@ public class FranchiseDriver {
 		fran.add(a3);
 		fran.add(a4);
 		System.out.println("add is successfull");
+		System.out.println(fran );
 	}
 
 }
